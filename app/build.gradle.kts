@@ -53,27 +53,30 @@ dependencies {
     implementation(libs.androidx.material3)
 
     // Retrofit for API calls
+    implementation("androidx.compose.material:material:1.6.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation("androidx.activity:activity-compose:1.8.0")
+
+    // MPAndroidChart for displaying charts (for crypto price fluctuations)
+
+    val vicoVersion = "2.0.0-beta.3"
 
 
-    // Gson for JSON parsing
-    implementation("com.google.code.gson:gson:2.10")
 
-    // Kotlin Coroutines for asynchronous operations
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
-    // Unit testing
+
+    // Unit testing dependencies
     testImplementation(libs.junit)
 
-    // Android testing
+    // Android testing dependencies
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
 
-    // Debugging tools
+    // Debugging tools for Jetpack Compose UI
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
